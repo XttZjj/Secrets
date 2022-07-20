@@ -11,7 +11,7 @@ const passportLocalMongoose = require("passport-local-mongoose")
 const app = express();
 
 app.use(session({
-  secret: "This is a secret.",
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false
 }));
